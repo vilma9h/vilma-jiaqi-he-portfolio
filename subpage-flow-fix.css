@@ -1,0 +1,143 @@
+/*
+  Compensate for the taller paragraph line-height used across the project pages.
+  Desktop project layouts use fixed section heights and absolute positioning, so
+  downstream media must be moved with the expanded copy. Mobile already flows.
+*/
+
+@media (min-width: 901px) {
+  /* KUKU MAKE */
+  .project-page.mission {
+    height: 1321px;
+  }
+
+  .project-page.mission .mission-grid {
+    top: 484px;
+  }
+
+  .project-page.feature:has(.logo-design) {
+    height: 1177px;
+  }
+
+  .project-page.feature .logo-design {
+    top: 369px;
+  }
+
+  .project-page.typography-page {
+    height: 1300px;
+  }
+
+  .project-page.typography-page .type-carousel {
+    top: 408px;
+  }
+
+  .project-page.website {
+    height: 2168px;
+  }
+
+  .project-page.website .website-layout {
+    top: 446px;
+  }
+
+  .project-page.outcomes {
+    height: 3237px;
+  }
+
+  /* TEAOC.ART */
+  .teaoc-cover {
+    height: 1146px;
+  }
+
+  .teaoc-section.role-section {
+    height: 995px;
+  }
+
+  .teaoc-section.website-section {
+    height: 2290px;
+  }
+
+  .teaoc-section.website-section .website-composition {
+    top: 486px;
+  }
+
+  .teaoc-section.website-section .website-devices {
+    top: 1313px;
+  }
+
+  .teaoc-section.gallery-section {
+    height: 1907px;
+  }
+
+  .teaoc-section.gallery-section .gallery-grid {
+    top: 487px;
+  }
+
+  .teaoc-section.social-section .social-top {
+    top: 352px;
+  }
+
+  .teaoc-section.email-section {
+    height: 1561px;
+  }
+
+  .teaoc-section.email-section .email-composition {
+    top: 526px;
+  }
+
+  .teaoc-section.outcomes-section {
+    height: 601px;
+  }
+
+  /* Porsche Taycan */
+  .p-section.vision blockquote {
+    top: 487px;
+  }
+
+  /* Wheel Cart */
+  .wc-section.cover {
+    height: 1156px;
+  }
+
+  .wc-section.vision {
+    height: 1683px;
+  }
+
+  .wc-section.vision blockquote {
+    top: 528px;
+  }
+
+  .wc-section.vision .context-heading,
+  .wc-section.vision .context-copy {
+    top: 712px !important;
+  }
+
+  .wc-section.vision .challenge {
+    top: 1101px;
+  }
+
+  .wc-section.users-section {
+    height: 2237px;
+  }
+
+  .wc-section.users-section .flow-carousel {
+    top: 1503px;
+  }
+
+  .wc-section.system-section .system-images {
+    top: 487px;
+  }
+
+  .wc-section.outcome {
+    height: 411px;
+  }
+}
+
+/* Every project page ends with at least 120px of clear space. */
+main > section:last-child {
+  padding-bottom: 120px !important;
+}
+
+@media (max-width: 900px) {
+  main > section:last-child {
+    padding-bottom: 120px !important;
+  }
+}
