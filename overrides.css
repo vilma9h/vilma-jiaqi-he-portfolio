@@ -1,0 +1,221 @@
+/* Responsive refinements based on browser review comments. */
+.experience .jobs article.ucca {
+  width: 100%;
+  max-width: none !important;
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
+.experience .jobs article.ucca h3 {
+  font-size: clamp(38px, 3.7vw, 64px) !important;
+  white-space: nowrap;
+}
+
+.experience .jobs article.ucca h4 {
+  font-size: clamp(20px, 2.083vw, 36px);
+  white-space: nowrap;
+}
+
+.experience .jobs article.ucca p {
+  max-width: 1032px !important;
+  margin-left: auto !important;
+  text-align: right;
+}
+
+.works h2 {
+  max-width: 100%;
+  font-size: clamp(44px, 5.56vw, 96px);
+  white-space: nowrap;
+}
+
+.works .grid {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 5.56vw, 96px);
+}
+
+.works .card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 401px;
+  background: transparent;
+}
+
+.works .card img {
+  width: 100%;
+  height: 279px;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.works .card div {
+  min-height: 121px;
+  background: transparent;
+}
+
+.works .card h3 {
+  font-size: clamp(24px, 2.083vw, 36px);
+  white-space: normal;
+}
+
+.works .card p {
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .experience .jobs article.right {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .experience .jobs article.right p {
+    margin-left: auto;
+  }
+
+  .education .edu.right {
+    text-align: right !important;
+  }
+
+  .experience .jobs article.ucca {
+    text-align: right !important;
+  }
+
+  .experience .jobs article.ucca h3,
+  .experience .jobs article.ucca h4 {
+    white-space: nowrap;
+  }
+
+  .works .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .works .card {
+    min-height: 0;
+  }
+
+  .works .card img {
+    height: clamp(180px, 38vw, 279px);
+  }
+}
+
+html[lang="zh-CN"] body[data-site-page="home"] .hero h1,
+html[lang="zh-CN"] body[data-site-page="home"] .intro h2,
+html[lang="zh-CN"] body[data-site-page="home"] .education h2,
+html[lang="zh-CN"] body[data-site-page="home"] .experience > h2,
+html[lang="zh-CN"] body[data-site-page="home"] .edu h3 {
+  line-height: 1.12;
+}
+
+html[lang="zh-CN"] body[data-site-page="home"] .services,
+html[lang="zh-CN"] body[data-site-page="home"] .lead,
+html[lang="zh-CN"] body[data-site-page="home"] .statement,
+html[lang="zh-CN"] body[data-site-page="home"] .note,
+html[lang="zh-CN"] body[data-site-page="home"] .edu p,
+html[lang="zh-CN"] body[data-site-page="home"] .edu small,
+html[lang="zh-CN"] body[data-site-page="home"] .jobs p,
+html[lang="zh-CN"] body[data-site-page="home"] .card p {
+  line-height: 1.35;
+}
+
+html[lang="zh-CN"] body[data-site-page="home"] .services {
+  line-height: 3.1;
+}
+
+html[lang="zh-CN"] body[data-site-page="home"] .lead,
+html[lang="zh-CN"] body[data-site-page="home"] .statement {
+  line-height: 3.1;
+}
+
+@media (max-width: 900px) {
+  html[lang="zh-CN"] body[data-site-page="home"] .services,
+  html[lang="zh-CN"] body[data-site-page="home"] .lead,
+  html[lang="zh-CN"] body[data-site-page="home"] .statement,
+  html[lang="zh-CN"] body[data-site-page="home"] .note,
+  html[lang="zh-CN"] body[data-site-page="home"] .edu p,
+  html[lang="zh-CN"] body[data-site-page="home"] .edu small,
+  html[lang="zh-CN"] body[data-site-page="home"] .jobs p,
+  html[lang="zh-CN"] body[data-site-page="home"] .card p {
+    line-height: 1.5;
+  }
+
+  html[lang="zh-CN"] body[data-site-page="home"] .services {
+    line-height: 3.2;
+  }
+
+  html[lang="zh-CN"] body[data-site-page="home"] .intro .lead,
+  html[lang="zh-CN"] body[data-site-page="home"] .statement {
+    line-height: 3.2;
+  }
+}
+
+/* Match homepage body-copy leading to the project-page system. */
+.services,
+.lead,
+.statement,
+.note,
+.edu p,
+.edu small,
+.jobs p,
+.card p {
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .services,
+  .intro .lead,
+  .statement,
+  .about .note,
+  .edu p,
+  .edu small,
+  .jobs p,
+  .card p {
+    line-height: 1.35;
+  }
+}
+.works .card.wide {
+  position: relative;
+}
+
+.works .card.wide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.works .card.wide::after {
+  content: "Case Study Coming Soon...";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  translate: -50% -50%;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+  transition: opacity 0.25s ease;
+}
+
+.works .card.wide:hover::before,
+.works .card.wide:hover::after,
+.works .card.wide:focus-visible::before,
+.works .card.wide:focus-visible::after {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .works .card.wide::after {
+    font-size: 22px;
+  }
+}

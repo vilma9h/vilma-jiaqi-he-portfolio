@@ -1,0 +1,45 @@
+.project-summary,
+.section-copy,
+.project-meta dd,
+.challenge > div,
+.persona-labels,
+.device p {
+  line-height: 1.2;
+}
+
+@media (min-width: 901px) {
+  .system-section {
+    height: 3302px;
+  }
+
+  .digital-heading {
+    top: 971px !important;
+  }
+
+  .phone {
+    top: 1085px;
+  }
+
+  .desktop {
+    top: 1716px;
+  }
+
+  .watch {
+    top: 2493px;
+  }
+}
+
+.flow-carousel{position:absolute;left:0;top:1438px;width:1728px;height:614px}.flow-carousel-viewport{position:absolute;left:178px;top:0;width:1372px;height:614px;overflow:hidden;background:#fff}.flow-carousel-track{display:flex;width:100%;height:100%;transition:transform .7s cubic-bezier(.22,.75,.2,1);will-change:transform}.flow-carousel-track img{flex:0 0 1372px;width:1372px;height:614px;object-fit:contain;background:#fff}.flow-carousel-button{position:absolute;top:50%;translate:0 -50%;width:68px;height:68px;border:0;border-radius:50%;display:grid;place-items:center;color:#fff;background:#111;font:300 54px/1 Arial,sans-serif;cursor:pointer;transition:color .22s,background-color .22s,scale .22s}.flow-carousel-button:hover,.flow-carousel-button:focus-visible{color:#111;background:#84deff;scale:1.07}.flow-carousel-button.previous{left:60px}.flow-carousel-button.next{right:60px}.flow-carousel-button span{display:block;translate:0 -3px}.flow-carousel-status{position:absolute;right:180px;bottom:14px;padding:7px 12px;border-radius:999px;color:#fff;background:rgba(0,0,0,.52);font-size:14px;line-height:1}
+.desktop-carousel{position:relative;flex:0 0 811px;width:811px;height:578px}.desktop-carousel-viewport{width:100%;height:100%;overflow:hidden;background:#fff}.desktop-carousel-track{display:flex;width:100%;height:100%;transition:transform .7s cubic-bezier(.22,.75,.2,1);will-change:transform}.desktop-carousel-track img{flex:0 0 811px;width:811px!important;height:578px!important;object-fit:contain;background:#fff}.desktop-carousel-button{position:absolute;top:50%;translate:0 -50%;width:52px;height:52px;border:0;border-radius:50%;display:grid;place-items:center;color:#fff;background:#111;font:300 43px/1 Arial,sans-serif;cursor:pointer;transition:color .22s,background-color .22s,scale .22s}.desktop-carousel-button:hover,.desktop-carousel-button:focus-visible{color:#111;background:#84deff;scale:1.07}.desktop-carousel-button.previous{left:-62px}.desktop-carousel-button.next{right:-62px}.desktop-carousel-button span{display:block;translate:0 -3px}.desktop-carousel-status{position:absolute;right:14px;bottom:14px;padding:7px 12px;border-radius:999px;color:#fff;background:rgba(0,0,0,.52);font-size:14px;line-height:1}
+
+@media (max-width: 900px) {
+  .project-summary,
+  .section-copy,
+  .challenge > div,
+  .device p {
+    line-height: 1.35;
+  }
+
+  .flow-carousel{position:relative;left:auto;top:auto;width:100%;height:auto;margin-top:36px;padding:0 38px}.flow-carousel-viewport{position:relative;left:auto;width:100%;height:auto;aspect-ratio:1372/614}.flow-carousel-track img{width:100%;height:100%;flex-basis:100%}.flow-carousel-button{width:44px;height:44px;font-size:38px}.flow-carousel-button.previous{left:-4px}.flow-carousel-button.next{right:-4px}.flow-carousel-status{right:48px;bottom:8px;font-size:11px}
+  .desktop-carousel{width:100%;height:auto;flex-basis:auto;padding:0 38px}.desktop-carousel-viewport{aspect-ratio:811/578}.desktop-carousel-track img{width:100%!important;height:100%!important;flex-basis:100%;object-fit:contain}.desktop-carousel-button{width:44px;height:44px;font-size:38px}.desktop-carousel-button.previous{left:-4px}.desktop-carousel-button.next{right:-4px}.desktop-carousel-status{right:48px;bottom:8px;font-size:11px}
+}

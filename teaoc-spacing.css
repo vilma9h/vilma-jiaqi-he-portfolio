@@ -1,0 +1,23 @@
+.project-summary,
+.section-copy,
+.social-top p,
+.role-grid p {
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .project-summary,
+  .section-copy,
+  .social-top p {
+    line-height: 1.35;
+  }
+}
+
+.website-video {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

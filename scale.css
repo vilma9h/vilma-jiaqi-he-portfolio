@@ -1,0 +1,160 @@
+/* Preserve the 1728px Figma composition at every viewport width. */
+html {
+  overflow-x: hidden;
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 101px;
+}
+
+:root {
+  --pad: 120px;
+}
+
+body,
+main {
+  width: 1728px !important;
+  max-width: none !important;
+}
+
+.nav {
+  width: 1728px !important;
+  height: 101px !important;
+  padding: 36px 60px !important;
+  font-size: 18px !important;
+}
+
+.nav nav {
+  display: flex !important;
+}
+
+.nav-end > a {
+  display: block !important;
+}
+
+.brand strong {
+  font-size: 18px !important;
+}
+
+.brand img {
+  width: 53px !important;
+}
+
+.panel {
+  width: 1728px !important;
+  height: 1117px !important;
+  min-height: 1117px !important;
+}
+
+.hero h1,
+.intro h2,
+.education h2,
+.experience > h2,
+.works h2,
+.playground h2 {
+  font-size: 96px !important;
+}
+
+.hero h1 {
+  bottom: var(--hero-title-bottom, 134px) !important;
+}
+
+.services,
+.intro .lead,
+.statement,
+.based {
+  font-size: 36px !important;
+  line-height: 1 !important;
+}
+
+.about .note {
+  width: auto !important;
+  font-size: 16px !important;
+}
+
+.n1 { left: 15% !important; right: auto !important; top: 62% !important; }
+.n2 { left: auto !important; right: 10% !important; top: 73% !important; }
+.n3 { left: 24% !important; right: auto !important; top: 87% !important; }
+
+.education {
+  width: 1728px !important;
+  height: 1421px !important;
+}
+
+.education .edu {
+  left: auto !important;
+  right: auto !important;
+}
+
+.education .edu.right {
+  top: 39% !important;
+  right: 8.7% !important;
+  text-align: right !important;
+}
+
+.education .edu.left {
+  top: 70% !important;
+  left: 120px !important;
+  text-align: left !important;
+}
+
+.education .edu h3 { font-size: 96px !important; }
+.education .edu p { margin-top: 36px !important; font-size: 36px !important; }
+.education .edu small { margin-top: 36px !important; font-size: 16px !important; }
+
+.experience {
+  width: 1728px !important;
+  height: 1903px !important;
+}
+
+.experience .jobs {
+  top: 24% !important;
+  left: 120px !important;
+  right: 120px !important;
+  gap: 78px !important;
+}
+
+.experience .jobs article.right {
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
+.experience .jobs h3 { font-size: 64px !important; }
+.experience .jobs article.ucca h3 { font-size: 64px !important; }
+.experience .jobs h4 { margin-top: 36px !important; font-size: 36px !important; }
+.experience .jobs p { margin-top: 36px !important; font-size: 16px !important; }
+
+.works {
+  width: 1728px !important;
+  min-height: 1714px !important;
+  padding: 140px 120px !important;
+}
+
+.works h2 {
+  margin-bottom: 100px !important;
+  white-space: nowrap !important;
+}
+
+.works .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 96px !important;
+}
+
+.works .card {
+  min-height: 401px !important;
+}
+
+.works .card img {
+  height: 279px !important;
+}
+
+.works .card h3 { font-size: 36px !important; }
+.works .card.wide { grid-column: 1 / -1 !important; }
+
+.playground {
+  width: 1728px !important;
+  height: 2009px !important;
+  padding: 145px 120px !important;
+}

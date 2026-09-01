@@ -1,0 +1,108 @@
+/* Keep the navigation mark visible when pages are opened directly from disk.
+   The previous external SVG mask is blocked by some file:// browser contexts. */
+.brand::before,
+.project-brand::before {
+  display: none !important;
+}
+
+.brand img,
+.project-brand img {
+  display: block !important;
+  flex: 0 0 53px;
+  width: 53px !important;
+  height: 27px !important;
+  opacity: 1 !important;
+  object-fit: contain;
+  filter: none;
+  transition: filter .22s ease;
+}
+
+.brand-logo {
+  display: block;
+  flex: 0 0 53px;
+  width: 53px;
+  height: 27px;
+  fill: currentColor;
+  transition: fill .22s ease;
+}
+
+.project-brand strong {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+html[lang="zh-CN"] .badge-frame-connect {
+  left: 65.5%;
+  width: 26.68%;
+}
+
+.nav-end button,
+.project-nav-end button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  appearance: none;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-align: center;
+  text-indent: 0;
+}
+
+.nav.nav-light .brand img,
+.project-nav.nav-light .project-brand img {
+  filter: brightness(0);
+}
+
+.nav.nav-dark .brand img,
+.project-nav.nav-dark .project-brand img {
+  filter: none;
+}
+
+.brand:hover img,
+.brand:focus-visible img,
+.project-brand:hover img,
+.project-brand:focus-visible img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(26%) saturate(968%) hue-rotate(165deg) brightness(103%) contrast(101%) !important;
+}
+
+@media (max-width: 900px) {
+  .brand-logo {
+    flex-basis: 40px;
+    width: 40px;
+  }
+
+  .brand img,
+  .project-brand img {
+    flex-basis: 40px;
+    width: 40px !important;
+  }
+}
+/* Chinese homepage: preserve generous multi-line spacing after scale.css. */
+html[lang="zh-CN"] body[data-site-page="home"] .services,
+html[lang="zh-CN"] body[data-site-page="home"] .intro .lead,
+html[lang="zh-CN"] body[data-site-page="home"] .statement {
+  line-height: 1.7 !important;
+}
+
+/* Comfortable line spacing inside paragraph text across every page. */
+main p {
+  line-height: 1.6 !important;
+}
+
+html[lang="zh-CN"] main p {
+  line-height: 1.8 !important;
+}
+
+/* The three deliberately stacked homepage text blocks need extra breathing room. */
+html[lang="zh-CN"] body[data-site-page="home"] .services,
+html[lang="zh-CN"] body[data-site-page="home"] .intro .lead,
+html[lang="zh-CN"] body[data-site-page="home"] .statement {
+  line-height: 1.7 !important;
+}
