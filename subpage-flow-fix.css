@@ -88,8 +88,20 @@
   }
 
   /* Porsche Taycan */
+  .p-section.vision {
+    height: 2197px;
+  }
+
   .p-section.vision blockquote {
-    top: 487px;
+    top: 575px;
+  }
+
+  .p-section.vision .modes-heading {
+    top: 823px;
+  }
+
+  .p-section.vision .modes {
+    top: 979px;
   }
 
   /* Wheel Cart */
