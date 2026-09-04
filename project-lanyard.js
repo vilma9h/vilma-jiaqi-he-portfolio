@@ -23,7 +23,7 @@ for (let index = 0; index < STRAP_SEGMENT_COUNT; index += 1) {
   segment.classList.add('strap-texture-segment')
 
   const image = document.createElementNS(SVG_NS, 'image')
-  image.setAttribute('href', 'assets/lanyard-strap.png')
+  image.setAttribute('href', 'assets/lanyard-strap.webp')
   image.setAttribute('x', '0')
   image.setAttribute('y', '0')
   image.setAttribute('width', '272')
@@ -206,6 +206,27 @@ lanyardBadge.addEventListener('lostpointercapture', releaseLanyard)
 window.addEventListener('pointerup', releaseLanyard)
 window.addEventListener('pointercancel', releaseLanyard)
 
+const deferredVideos = document.querySelectorAll('video.deferred-video[data-src]')
+const loadDeferredVideo = (video) => {
+  if (video.dataset.src) {
+    video.src = video.dataset.src
+    delete video.dataset.src
+    video.load()
+  }
+  video.play().catch(() => {})
+}
+
+if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) loadDeferredVideo(entry.target)
+      else entry.target.pause()
+    })
+  }, { rootMargin: '400px 0px 400px 0px' })
+  deferredVideos.forEach((video) => videoObserver.observe(video))
+} else {
+  deferredVideos.forEach(loadDeferredVideo)
+}
+
 
 })();
-

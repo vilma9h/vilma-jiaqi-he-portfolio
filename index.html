@@ -20,7 +20,7 @@
     <video id="splash-video" autoplay muted playsinline preload="auto" src="assets/splash.mp4"></video>
     <button id="splash-skip" type="button">SKIP</button>
   </div>
-  <video id="hero-video" class="hero-video" muted playsinline preload="auto" src="assets/hero-web.mp4" aria-hidden="true"></video>
+  <video id="hero-video" class="hero-video" muted playsinline preload="none" data-src="assets/hero-web.mp4" aria-hidden="true"></video>
   <div class="video-shade" aria-hidden="true"></div>
 
   <aside id="contact-card" class="contact-lanyard" aria-hidden="true">
@@ -34,8 +34,8 @@
       <div class="lanyard-payload">
         <div class="lanyard-clip"><i></i></div>
         <div class="lanyard-badge">
-          <img class="badge-frame-bg" src="assets/badge-background.png" alt="">
-          <img class="badge-frame-logo" src="assets/badge-logo.png" alt="Vilma logo">
+          <img class="badge-frame-bg" src="assets/badge-background.webp" alt="" loading="lazy" decoding="async">
+          <img class="badge-frame-logo" src="assets/badge-logo.webp" alt="Vilma logo" loading="lazy" decoding="async">
           <p class="badge-frame-connect">OPEN TO CONNECT :)</p>
           <div class="badge-frame-profile">
             <p class="badge-frame-name"><span>VILMA JIAQI HE</span><span>何 嘉琪</span></p>
@@ -47,7 +47,7 @@
             <p>TEL:<br>+86 150-3066-8882</p>
             <p>EMAIL:<br>vilmahe0601@outlook.com</p>
           </div>
-          <img class="badge-frame-arrow" src="assets/badge-arrow.svg" alt="">
+          <img class="badge-frame-arrow" src="assets/badge-arrow.svg" alt="" loading="lazy" decoding="async">
           <p class="badge-frame-slogan">LET’s CREATING<br>SOMETHING<br><span>TOGETHER.</span></p>
         </div>
       </div>
@@ -98,15 +98,15 @@
     <section id="works" class="works forest">
       <h2>SELECTED WORKS</h2>
       <div class="grid">
-        <article class="card kuku-card" role="link" tabindex="0" aria-label="Open KUKU MAKE project"><img src="assets/raw_11.png" alt="KUKU MAKE"><div><h3>KUKU MAKE</h3><p><span>Branding Strategy</span><span>Branding Design</span><span>Website Design</span></p></div></article>
-        <article class="card teaoc-card" role="link" tabindex="0" aria-label="Open TEAOC.ART project"><img src="assets/raw_07.png" alt="TEAOC.ART"><div><h3>TEAOC.ART</h3><p><span>Website Design</span><span>Media Design</span><span>Marketing Design</span></p></div></article>
-        <article class="card porsche-card" role="link" tabindex="0" aria-label="Open Porsche Taycan Vision 2035 project"><img src="assets/raw_10.png" alt="Porsche Taycan Vision 2035"><div><h3>Porsche Taycan Vision 2035</h3><p><span>UI/UX Design</span><span>Automotive Design</span></p></div></article>
-        <article class="card wheel-card" role="link" tabindex="0" aria-label="Open Wheel Cart project"><img src="assets/raw_15.png" alt="Wheel Cart"><div><h3>WHEEL CART</h3><p><span>UI/UX Design</span><span>Speculative Design</span></p></div></article>
-        <article class="card wide"><img src="assets/raw_16.png" alt="Future Plant Fossils"><div><h3>Future Plant Fossils · Mt. Wilson</h3><p><span>AR Installation</span><span>Digital Media</span><span>Graphic Design</span></p></div></article>
+        <article class="card kuku-card" role="link" tabindex="0" aria-label="Open KUKU MAKE project"><img src="assets/raw_11.webp" alt="KUKU MAKE" loading="lazy" decoding="async"><div><h3>KUKU MAKE</h3><p><span>Branding Strategy</span><span>Branding Design</span><span>Website Design</span></p></div></article>
+        <article class="card teaoc-card" role="link" tabindex="0" aria-label="Open TEAOC.ART project"><img src="assets/raw_07.webp" alt="TEAOC.ART" loading="lazy" decoding="async"><div><h3>TEAOC.ART</h3><p><span>Website Design</span><span>Media Design</span><span>Marketing Design</span></p></div></article>
+        <article class="card porsche-card" role="link" tabindex="0" aria-label="Open Porsche Taycan Vision 2035 project"><img src="assets/raw_10.webp" alt="Porsche Taycan Vision 2035" loading="lazy" decoding="async"><div><h3>Porsche Taycan Vision 2035</h3><p><span>UI/UX Design</span><span>Automotive Design</span></p></div></article>
+        <article class="card wheel-card" role="link" tabindex="0" aria-label="Open Wheel Cart project"><img src="assets/raw_15.webp" alt="Wheel Cart" loading="lazy" decoding="async"><div><h3>WHEEL CART</h3><p><span>UI/UX Design</span><span>Speculative Design</span></p></div></article>
+        <article class="card wide"><img src="assets/raw_16.webp" alt="Future Plant Fossils" loading="lazy" decoding="async"><div><h3>Future Plant Fossils · Mt. Wilson</h3><p><span>AR Installation</span><span>Digital Media</span><span>Graphic Design</span></p></div></article>
       </div>
     </section>
 
-    <section id="playground" class="playground forest"><h2>PLAYGROUND</h2><div class="playground-grid"><div class="playground-column"><img class="tile tile-boundary" src="assets/playground/boundary.png" alt="Boundary — The Museum of Fence"><img class="tile tile-looking" src="assets/playground/looking-back.png" alt="Looking Back Looking Forward"></div><div class="playground-column"><video class="tile tile-landscape" autoplay muted loop playsinline preload="metadata" src="assets/playground/superblooms.mp4" aria-label="Growing SuperBlooms"></video><img class="tile tile-intertwined" src="assets/playground/intertwined.png" alt="Intertwined and Rooted"><video class="tile tile-medium" autoplay muted loop playsinline preload="metadata" src="assets/playground/64-2.mp4" aria-label="Motion design exploration"></video></div><div class="playground-column"><img class="tile tile-botanica" src="assets/playground/botanica.png" alt="Botanica editorial design"><video class="tile tile-portrait-video" autoplay muted loop playsinline preload="metadata" src="assets/playground/64-3.mp4" aria-label="Wearable design experiment"></video><video class="tile tile-square" autoplay muted loop playsinline preload="metadata" src="assets/playground/td-movie.mp4" aria-label="Critical technology experiment"></video></div></div></section>
+    <section id="playground" class="playground forest"><h2>PLAYGROUND</h2><div class="playground-grid"><div class="playground-column"><img class="tile tile-boundary" src="assets/playground/boundary.webp" alt="Boundary — The Museum of Fence" loading="lazy" decoding="async"><img class="tile tile-looking" src="assets/playground/looking-back.webp" alt="Looking Back Looking Forward" loading="lazy" decoding="async"></div><div class="playground-column"><video class="tile tile-landscape" muted loop playsinline preload="none" data-src="assets/playground/superblooms.mp4" aria-label="Growing SuperBlooms"></video><img class="tile tile-intertwined" src="assets/playground/intertwined.webp" alt="Intertwined and Rooted" loading="lazy" decoding="async"><video class="tile tile-medium" muted loop playsinline preload="none" data-src="assets/playground/64-2.mp4" aria-label="Motion design exploration"></video></div><div class="playground-column"><img class="tile tile-botanica" src="assets/playground/botanica.webp" alt="Botanica editorial design" loading="lazy" decoding="async"><video class="tile tile-portrait-video" muted loop playsinline preload="none" data-src="assets/playground/64-3.mp4" aria-label="Wearable design experiment"></video><video class="tile tile-square" muted loop playsinline preload="none" data-src="assets/playground/td-movie.mp4" aria-label="Critical technology experiment"></video></div></div></section>
   </main>
   <script src="script.js?v=20260901-1"></script>
   <script src="playground-media.js?v=20260901-2"></script>

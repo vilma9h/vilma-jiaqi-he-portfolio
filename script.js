@@ -56,7 +56,7 @@ for (let index = 0; index < STRAP_SEGMENT_COUNT; index += 1) {
   segment.classList.add('strap-texture-segment')
 
   const image = document.createElementNS(SVG_NS, 'image')
-  image.setAttribute('href', 'assets/lanyard-strap.png')
+  image.setAttribute('href', 'assets/lanyard-strap.webp')
   image.setAttribute('x', '0')
   image.setAttribute('y', '0')
   image.setAttribute('width', '272')
@@ -74,10 +74,22 @@ const isPageReload = navigationEntry?.type === 'reload'
 let storedSplashSeen = false
 try { storedSplashSeen = sessionStorage.getItem('vilma-splash-seen-v2') === '1' } catch (_) {}
 const splashSeen = skipSplash || (!forceFreshEntry && !isPageReload && storedSplashSeen)
+let heroLoadStarted = false
+function loadHeroVideo() {
+  if (heroLoadStarted) return
+  heroLoadStarted = true
+  const source = heroVideo.dataset.src
+  if (source) {
+    heroVideo.src = source
+    delete heroVideo.dataset.src
+    heroVideo.load()
+  }
+}
 if (skipSplash) history.replaceState(null, '', location.pathname + (location.hash || '#home'))
 if (!splashSeen) document.documentElement.classList.add('splash-active')
 else {
   splash.hidden = true
+  loadHeroVideo()
   startRevealEffects()
 }
 
@@ -101,6 +113,10 @@ function closeSplash() {
   })
   window.setTimeout(() => {
     splash.hidden = true
+    splashVideo.pause()
+    splashVideo.removeAttribute('src')
+    splashVideo.load()
+    loadHeroVideo()
   }, 700)
 }
 
