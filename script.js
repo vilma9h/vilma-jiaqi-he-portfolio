@@ -75,16 +75,29 @@ let storedSplashSeen = false
 try { storedSplashSeen = sessionStorage.getItem('vilma-splash-seen-v2') === '1' } catch (_) {}
 const splashSeen = skipSplash || (!forceFreshEntry && !isPageReload && storedSplashSeen)
 let heroLoadStarted = false
-function loadHeroVideo() {
+let heroReady = false
+let heroObjectUrl = ''
+async function loadHeroVideo() {
   if (heroLoadStarted) return
   heroLoadStarted = true
   const source = heroVideo.dataset.src
-  if (source) {
+  if (!source) return
+  try {
+    const response = await fetch(source, { cache: 'force-cache' })
+    if (!response.ok) throw new Error(`Hero video request failed: ${response.status}`)
+    const blob = await response.blob()
+    heroObjectUrl = URL.createObjectURL(blob)
+    heroVideo.src = heroObjectUrl
+    heroVideo.load()
+  } catch (_) {
     heroVideo.src = source
-    delete heroVideo.dataset.src
     heroVideo.load()
   }
 }
+loadHeroVideo()
+window.addEventListener('pagehide', () => {
+  if (heroObjectUrl) URL.revokeObjectURL(heroObjectUrl)
+}, { once: true })
 if (skipSplash) history.replaceState(null, '', location.pathname + (location.hash || '#home'))
 if (!splashSeen) document.documentElement.classList.add('splash-active')
 else {
@@ -341,6 +354,10 @@ function calculateHeroTarget() {
 }
 
 function renderHeroScrollFrame() {
+  if (!heroReady) {
+    heroAnimationFrame = 0
+    return
+  }
   const difference = heroTargetTime - heroDisplayedTime
   heroDisplayedTime += difference * .16
 
@@ -359,6 +376,7 @@ function renderHeroScrollFrame() {
 }
 
 function scrubHeroVideo() {
+  if (!heroReady) return
   heroTargetTime = calculateHeroTarget()
   if (!heroAnimationFrame) {
     heroAnimationFrame = requestAnimationFrame(renderHeroScrollFrame)
@@ -366,6 +384,7 @@ function scrubHeroVideo() {
 }
 
 heroVideo.addEventListener('loadedmetadata', () => {
+  heroReady = true
   heroVideo.pause()
   heroTargetTime = calculateHeroTarget()
   heroDisplayedTime = heroTargetTime
